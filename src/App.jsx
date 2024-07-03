@@ -3,6 +3,7 @@ import "./App.css";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from "./Home";
 import Details from "./Details";
+import Count from "../Count";
 
 function App() {
   
@@ -17,7 +18,7 @@ function App() {
     },
 
     {
-      id : 2,
+      id : 2,  
       name : 'shoes',
       detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
       price : '620',
@@ -126,7 +127,8 @@ function App() {
 
 <Router>
   <Routes>
-    <Route path="/"  element={<Home data={product}/>}></Route>
+    <Route path="/home"  element={<Home data={product}/>}></Route>
+    <Route path="/"  element={<Count/>}></Route>
     <Route path="/details/:id"  element={<Details product ={product}/>}></Route>
   </Routes>
 </Router>

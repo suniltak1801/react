@@ -16,10 +16,13 @@ function Details({product}) {
 
         <div className='cart-details' key={matchid.id}>
             <img src={matchid.image} alt="" />
-            <h1>{matchid.name}</h1>
+            <div className='card-box'>
+              <h1>{matchid.name}</h1>
             <h3>Price : {matchid.price}</h3>
             <p>{matchid.detail}</p> 
-            
+            <p className='free'>Free Delivery</p>
+            <button className='btn-cart'>Buy Now</button>
+            </div>
             </div>
       
     </div>
