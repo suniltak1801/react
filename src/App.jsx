@@ -1,15 +1,17 @@
 import React from "react";
 import "./App.css";
-// import Card from "./Card";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Home from "./Home";
+import Details from "./Details";
 
 function App() {
-  C:\Users\Sunil Tak\Desktop\REACT\introduction\src\App.jsx
-
+  
+  
   const product = [
     {
       id : 1,
       name : 'shoes',
-      detail : 'dknacnadonhasosfaoifh',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
       price : '600',
       image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
     },
@@ -17,33 +19,69 @@ function App() {
     {
       id : 2,
       name : 'shoes',
-      detail : 'dknacnadonhasosfaoifh',
-      price : '600',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '620',
       image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
     },
 
     {
       id : 3,
       name : 'shoes',
-      detail : 'dknacnadonhasosfaoifh',
-      price : '600',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '680',
       image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
     },
 
     {
       id : 4,
-      name : 'shodfbfbbfbfbfbhes',
-      detail : 'dknacnadonhasosfaoifh',
-      price : '6077770',
+      name : 'shoes',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '640',
       image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
     },
+    {
+      id : 5,
+      name : 'shoes',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '770',
+      image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
+    },
+    {
+      id : 6,
+      name : 'shoes',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '770',
+      image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
+    },
+    {
+      id : 7,
+      name : 'sports shoes',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '470',
+      image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
+    },
+    {
+      id : 8,
+      name : 'shoes',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '570',
+      image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
+    },
+    {
+      id : 9,
+      name : 'stylish shoes',
+      detail : 'dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)',
+      price : '970',
+      image : 'https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg'
+    }
+    
    ]
   return (
     // <>
     //    {/* <div className="main">
     //     <Card
     //       name={"shoes"}
-    //       detail={"dknacnadonhasosfaoifh"}
+    //       detail={"dTrendy & Stylish Casual Shoes Sneakers For Men  (White, Blue)"}
     //       price={"600"}
     //       image={
     //         "https://cdn.pixabay.com/photo/2014/10/27/19/18/baby-shoes-505471_1280.jpg"
@@ -84,29 +122,16 @@ function App() {
     //     ))
     //   }  */}
     // </>
+<>
 
-  
-
-    <>
-
-    {
-      product.map((i) => (
-
-          <div key={i.id}>
-
-            <img src={i.image} alt="" />
-            <h1>{i.name}</h1>
-            <h3>{i.price}</h3>
-            <p>{i.detail}</p>
-
-          </div>
-      ))
-    }
-
-    
-    
-    
-    </>
+<Router>
+  <Routes>
+    <Route path="/"  element={<Home data={product}/>}></Route>
+    <Route path="/details/:id"  element={<Details product ={product}/>}></Route>
+  </Routes>
+</Router>
+   
+ </>
   );
 }
 

@@ -1,63 +1,74 @@
-.main{
-  width: auto;
+
+
+.container-cart{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
 }
-.cart-item {
-    display: flex;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 300px;
-    height: 200px;
-    background: #e47676;
-  }
+
+.cart {
+  width: 380px;
+  margin: 20px;
+  background-color: beige;
+  text-align: center;
+  justify-content: center;
+  border-radius: 3rem;
+}
+ 
+
+.container-cart img {
+  width: 350px;
+  height: auto;
+  padding: 15px;
+  border-radius: 3rem;
+}
+.container-cart h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.btn-cart{
+  margin: 20px;
+  font-size: 20px;
+  padding: 8px 16px;
+  color: #2f2d2d;
+  background-color: rgb(171, 152, 125);
+  border-style: hidden;
+  border-radius: 0 50%;
+}
+.btn-cart:hover{
+  border-radius: 50% 0;
+}
+
+
+/* details css */
+
+
+
+.container-cart-details{
+  display: flex;
+ align-items: center;
+  justify-content:center;
   
-  .cart-item img {
-    width: 120px;
-   object-fit: cover;
-    margin-right: 10px;
-  }
-  
-  .cart-item-details {
-    flex: 1; /* Allow details to fill remaining space */
-  }
-  
-  .cart-item-details h3 {
-    margin-top: 0; /* Remove top margin for cleaner look */
-  }
-  
-  .cart-item-details p {
-    margin-bottom: 5px; /* Add spacing between description and price */
-  }
-  
-  .price {
-    font-weight: bold;
-  }
-  
-  .quantity {
-    display: flex;
-    align-items: center;
-  }
-  
-  .quantity button {
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .quantity input {
-    width: 30px;
-    text-align: center;
-    border: 1px solid #ddd;
-    margin: 0 5px;
-  }
-  
-  .remove-item {
-    background-color: #f00; /* Red for remove button */
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px; /* Add space after quantity section */
-  }
-  
+}
+
+.cart-details {
+  width: 500px;
+  margin: 20px;
+  background-color: beige;
+  text-align: center;
+  justify-content: center;
+  border-radius: 3rem;
+}
+ 
+
+.container-cart-details img {
+  width: 470px;
+  height: auto;
+  padding: 15px;
+  border-radius: 3rem;
+}
+.container-cart-details h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
