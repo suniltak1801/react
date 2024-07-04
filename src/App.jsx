@@ -3,7 +3,11 @@ import "./App.css";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from "./Home";
 import Details from "./Details";
-import Count from "../Count";
+import Count from "./Count";
+import Navbar from "./Navbar";
+import './Navbar.css'; 
+import Footer from "./Footer";
+import RandomPass from "./RandomPass";
 
 function App() {
   
@@ -126,11 +130,14 @@ function App() {
 <>
 
 <Router>
+  <Navbar/>
+  <RandomPass/>
   <Routes>
     <Route path="/home"  element={<Home data={product}/>}></Route>
     <Route path="/"  element={<Count/>}></Route>
     <Route path="/details/:id"  element={<Details product ={product}/>}></Route>
   </Routes>
+  <Footer/>
 </Router>
    
  </>
