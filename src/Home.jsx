@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 
 function Home({data}) {
 
-
-
-
   return (
     <div className='container-cart'>
 

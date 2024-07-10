@@ -11,7 +11,7 @@ function Count() {
          setCount(count + 1)
       }
       else{
-         setCount(count * 0 )
+         setCount(0 )
       }
         
      }
@@ -32,6 +32,10 @@ function Count() {
    <h1>{count}</h1>
    <button className='btn-cart' onClick={decrement}>decrement -</button>
    </div>
+
+   
+   
+
    </>
   )
 }

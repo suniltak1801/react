@@ -51,6 +51,7 @@
   .navbar-button {
     cursor: pointer;
     background-color: #5189cd;
+    margin-left: 5px;
     color: #fff;
     border: none;
     padding: 8px 16px;
