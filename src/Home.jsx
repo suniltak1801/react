@@ -1,14 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import { context } from './context/ContextProvider.jsx';
 
 
-function Home({data}) {
-
+function Home() {
+  
+  const {product} = useContext(context)
+  console.log(product);
   return (
     <div className='container-cart'>
 
         {
-            data.map((i) => (
+            product.map((i) => (
                 <div className='cart' key={i.id}>
                     <img src={i.image} alt="" />
                     <h1>{i.name}</h1>

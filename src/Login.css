@@ -1,0 +1,46 @@
+
+.main-login-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfc;
+}
+.heading-login {
+    background-image: url(https://media.istockphoto.com/id/1212911887/photo/futuristic-digital-block-chain-background.jpg?s=1024x1024&w=is&k=20&c=Pu_7-kKU2bckXGeEU21ZG84Y_WpaKmh4vzBEA0HwE4E=);   
+         margin-bottom: 20px;
+        font-size: 24px;
+        color: #e34d0c;
+      
+}
+.login-div{
+    
+    background: rgb(119, 60, 206);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+
+.page {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

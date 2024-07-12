@@ -1,6 +1,9 @@
 import React from 'react'
+import { useContext } from 'react'
+import { context } from './context/ContextProvider.jsx'
 
-function AddCart({cart}) {
+function AddCart() {
+    const {cart} = useContext(context)
     return (
         <>
             {
@@ -13,7 +16,6 @@ function AddCart({cart}) {
             }
         </>
       )
-  
 }
 
 export default AddCart

@@ -5,19 +5,18 @@ import Home from "./Home";
 import Details from "./Details";
 import Count from "./Count";
 import Navbar from "./Navbar";
+import Login from "./Login";
 import "./Navbar.css";
+import "./Login.css"
 import Footer from "./Footer";
 // import RandomPass from "./RandomPass";
 import AddCart from "./AddCart";
 import { useEffect } from "react";
 
+
 function App() {
   
-const [cart, setCart] = useState([])
 
-function addtocart(product2) {   
-  setCart([...cart, product2])
-}
 
   // const product = [
   //   {
@@ -97,20 +96,20 @@ function addtocart(product2) {
   //   },
   // ];
  
-  const [product, setProduct] = useState([])
+  // const [product, setProduct] = useState([])
 
 
-   async function productGet() {
-   await fetch('https://fakestoreapi.com/products')
-    .then(res=>res.json())
-    .then(json=>setProduct(json))
+  //  async function productGet() {
+  //  await fetch('https://fakestoreapi.com/products')
+  //   .then(res=>res.json())
+  //   .then(json=>setProduct(json))
     
-  }
-  console.log(product);
+  // }
+  // console.log(product);
 
-  useEffect(() => {
-    productGet()
-  })
+  // useEffect(() => {
+  //   productGet()
+  // })
 
 
   return (
@@ -120,13 +119,14 @@ function addtocart(product2) {
         {/* <RandomPass/> */}
 
         <Routes>
-          <Route path="/home" element={<Home data={product} />}></Route>
+          <Route path="/home" element={<Home/>}></Route>
           <Route path="/" element={<Count />}></Route>
-          <Route path="/details/:id" element={<Details product={product} addtocart={addtocart} />}></Route>
-          <Route path="/addcart" element={<AddCart cart={cart} />}></Route>
+          <Route path="/details/:id" element={<Details />}></Route>
+          <Route path="/addcart" element={<AddCart/>}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </Router>
-      <Footer />
+      
     </>
   );
 }

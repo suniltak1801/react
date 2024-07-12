@@ -19,7 +19,7 @@ const Navbar = () => {
 
                 </div>
                 <div className="navbar-right">
-                  <Link to="/"><button className="navbar-button">Logout</button></Link>
+                  <Link to="/login"><button className="navbar-button">Login</button></Link>
                  
                   <Link to="/AddCart"><button className="navbar-button">Cart</button></Link> 
                 </div>

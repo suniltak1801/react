@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
+import { context } from "./context/ContextProvider.jsx";
 
-function Details({product, addtocart }) {
+function Details() {
+
+  const {product, addtocart} = useContext(context)
   const { id } = useParams();
 
   const matchid = product.find((i) => i.id == id); // 2
